@@ -7,7 +7,7 @@ import numpy as np
 import pandas as pd
 import pickle
 from keras.models import load_model
-from keras.models import load_model
+
 # ─── PAGE CONFIG ───
 st.set_page_config(
     page_title="Delivery Time Predictor",
@@ -105,7 +105,7 @@ html, body, [class*="css"] {
 @st.cache_resource
 def load_artifacts():
     scaler = pickle.load(open("scaler.pkl", "rb"))
-    model = load_model("model.h5")
+    model = load_model("model.keras")
     cols = pickle.load(open("cols.pkl", "rb"))
     return scaler, model, cols
 
