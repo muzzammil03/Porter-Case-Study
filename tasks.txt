@@ -1,0 +1,39 @@
+Porter is India's Largest Marketplace for Intra-City Logistics. Porter works with a wide range of restaurants to deliver their items directly to the people. It has a number of delivery partners available for delivering food from various restaurants and wants to get an estimated delivery time that it can provide the customers based on what they are ordering, from where, and also the delivery partners.
+
+Data Description:
+- market_id: integer id for the market where the restaurant lies
+- created_at: the timestamp at which the order was placed
+- actual_delivery_time: the timestamp when the order was delivered
+- store_primary_category: category for the restaurant
+- order_protocol: integer code value for order protocol (how the order was placed, i.e.,  through porter, call to restaurant, pre-booked, third party, etc)
+- total_items: total number of items
+- subtotal: final price of the order
+- num_distinct_items: the number of distinct items in the order
+- min_item_price: price of the cheapest item in the order
+- max_item_price: price of the costliest item in order
+- total_onshift_partners: number of delivery partners on duty at the time the order was placed
+- total_busy_partners: number of delivery partners attending to other tasks
+- total_outstanding_orders: total number of orders to be fulfilled at the moment
+
+Tasks:
+1. Define problem statement and perform EDA (10 points)
+a. Observations on the shape of data and the data types of all attributes.
+b. Missing Value Detection
+c. Outlier Detection 
+d. Data Visualisation for better understanding
+
+2. Data preprocessing and feature engineering (30 points)
+a. Creating the target column: time taken in each delivery from order timestamp (created_at) and delivery timestamp (actual_delivery_time). Get delivery time in minutes (Hint: use pandas datetime data type)
+b. Missing Value and Outlier Treatment
+c. Encoding Categorical Columns
+d. Feature Scaling
+
+3. Model building with hyperparameter tuning using TensorFlow (40 Points)
+a. Regression Model using neural networks 
+b. Defining NN architecture
+c. Trying different combinations and hyperparameters
+d. Model training
+
+4. Evaluation (20 Points)
+a. Comparison on the performance of the model using training, validation and test data
+b. Comments on insights & recommendations
